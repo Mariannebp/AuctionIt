@@ -4,7 +4,8 @@
   "description": "Semester Project 2",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "format": "prettier -w src/js/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Mariannebp/AuctionIt/issues"
   },
-  "homepage": "https://github.com/Mariannebp/AuctionIt#readme"
+  "homepage": "https://github.com/Mariannebp/AuctionIt#readme",
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
 }
