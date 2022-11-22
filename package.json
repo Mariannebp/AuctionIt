@@ -1,10 +1,17 @@
 {
   "name": "auctionit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Semester Project 2",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "format": "prettier -w src/js/**/*.js",
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix",
+    "prepare": "husky install",
+    "vite-dev": "vite",
+    "vite-build": "vite-build",
+    "vite-preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -15,5 +22,24 @@
   "bugs": {
     "url": "https://github.com/Mariannebp/AuctionIt/issues"
   },
-  "homepage": "https://github.com/Mariannebp/AuctionIt#readme"
+  "homepage": "https://github.com/Mariannebp/AuctionIt#readme",
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "vite": "^3.2.4"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
+  }
 }
