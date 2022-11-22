@@ -1,0 +1,19 @@
+{
+  "name": "auctionit",
+  "version": "0.0.1",
+  "description": "Semester Project 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mariannebp/AuctionIt.git"
+  },
+  "author": "Marianne Pedersen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mariannebp/AuctionIt/issues"
+  },
+  "homepage": "https://github.com/Mariannebp/AuctionIt#readme"
+}
