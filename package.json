@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npm test",
-    "format": "prettier -w src/js/**/*.js"
+    "format": "prettier -w src/js/**/*.js",
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/Mariannebp/AuctionIt#readme",
   "devDependencies": {
+    "eslint": "^8.28.0",
     "prettier": "^2.7.1"
   }
 }
