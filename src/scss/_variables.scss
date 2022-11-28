@@ -1,0 +1,27 @@
+// Colors //
+
+$dark-blue: #003d5c;
+$orange: #df7356;
+$teal: #006a7f;
+$beige: #b8b89f;
+$light-beige: #e9e9db;
+$light-red: #d95b5b;
+$white: #fff;
+
+$primary: $dark-blue;
+$secondary: $teal;
+$info: $orange;
+$buttonbg: $orange;
+$buttonbg-login: $teal;
+$beige: $beige;
+$light-beige: $light-beige;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "buttonbg": $buttonbg,
+  "buttonbg-login": $buttonbg-login,
+  "info": $info,
+  "beige": $beige,
+  "light-beige": $light-beige,
+);

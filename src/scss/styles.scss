@@ -1,1 +1,51 @@
+@import "./variables";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@font-face {
+  font-family: "Cinzel";
+  src: url("/assets/Fonts/Cinzel-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lora Italic";
+  src: url("/assets/Fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/assets/Fonts/Lora-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hind Madurai";
+  src: url("/assets/Fonts/HindMadurai-Regular.ttf") format("truetype");
+}
+
+header #logo {
+  font-family: "Cinzel";
+}
+
+header span {
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  font-family: "Lora Italic";
+}
+
+h3,
+h4,
+h5,
+a {
+  font-family: "Lora";
+}
+
+p,
+button {
+  font-family: "Hind Madurai";
+}
+
+footer {
+  border-top: 1px solid $beige;
+}
