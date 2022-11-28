@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AuctionIt - Profile</title>
+    <title>AuctionIt - Auction Specific</title>
     <link rel="stylesheet" href="/dist/css/styles.css" />
     <!-- <script type="module" src="/js/index.mjs" defer></script> -->
     <script
@@ -43,8 +43,17 @@
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item fst-italic text-secondary" href="#">
+                  <a class="dropdown-item" href="/pages/profile.html">
                     Profile
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item fst-italic text-secondary"
+                    id="auctionSpecificDropdown"
+                    href="#"
+                  >
+                    Auction Specific
                   </a>
                 </li>
               </ul>
@@ -431,17 +440,29 @@
             alt=""
           />
         </div>
-        <div class="d-flex justify-content-end mb-3">
-          <img
-            src="/assets/icons/timer.png"
-            alt="timer"
-            width="25"
-            height="25"
-          />
-          <p class="ms-2">12.24.22 23:59</p>
+        <div class="d-flex justify-content-between mb-3">
+          <div class="d-flex justify-content-end mb-3">
+            <img
+              src="/assets/icons/profile.png"
+              alt="timer"
+              width="25"
+              height="25"
+            />
+            <p class="ms-2">John Smith</p>
+          </div>
+          <div class="d-flex justify-content-end mb-3">
+            <img
+              src="/assets/icons/timer.png"
+              alt="timer"
+              width="25"
+              height="25"
+            />
+            <p class="ms-2">12.24.22 23:59</p>
+          </div>
         </div>
+
         <div class="mb-5">
-          <h2 class="fs-4">DESCRIPTION</h2>
+          <h2 class="fs-5">DESCRIPTION</h2>
           <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -449,7 +470,7 @@
             dicta sunt explicabo
           </p>
         </div>
-        <div class="row d-flex justify-content-between">
+        <div class="row d-flex justify-content-between pt-3 bg-light-beige">
           <div class="col-sm mb-4">
             <div>
               <p class="mb-1 text-secondary fs-5">Current Bid:</p>

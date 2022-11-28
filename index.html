@@ -15,9 +15,9 @@
   <body class="d-flex flex-column min-vh-100">
     <header class="mt-3">
       <div class="container">
-        <div class="row d-flex align-items-center justify-content-center">
+        <div class="row align-items-center justify-content-center">
           <div
-            class="col-md d-flex align-items-center justify-content-center justify-content-lg-start"
+            class="col-md-auto d-flex align-items-center justify-content-center justify-content-lg-start"
           >
             <div class="p-0 dropdown">
               <a
@@ -58,7 +58,9 @@
               <h1 class="m-auto ms-4" id="logo">Auction<span>it</span></h1>
             </a>
           </div>
-          <div class="col-md d-flex align-items-center justify-content-center">
+          <div
+            class="col-md mb-2 d-flex align-items-center justify-content-center"
+          >
             <h3 class="m-auto me-3 fs-6 text-secondary">
               Credits: $<span class="" id="credits"></span>
             </h3>
@@ -438,7 +440,72 @@
               alt=""
             />
             <div class="card-body">
-              <h2 class="card-title fs-4 text-center">Object up for auction</h2>
+              <div class="d-flex mt-2">
+                <img
+                  src="/assets/icons/profile.png"
+                  alt="timer"
+                  width="25"
+                  height="25"
+                />
+                <p class="ms-2">John Smith</p>
+              </div>
+              <h2 class="card-title fs-4 text-center mt-2">
+                Object up for auction
+              </h2>
+              <div class="d-flex justify-content-end mt-4">
+                <img
+                  src="/assets/icons/timer.png"
+                  alt="timer"
+                  width="25"
+                  height="25"
+                />
+                <p class="ms-2 mb-1">12.24.22 23:59</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card-footer bg-transparent border-beige d-flex justify-content-around align-items-center p-0"
+          >
+            <div class="text-center text-secondary mt-2">
+              <p class="mb-1">Current Bid:</p>
+              <p class="mb-2 fw-bold">$105</p>
+            </div>
+            <div class="text-center">
+              <a
+                href="/pages/auction-specific.html"
+                class="text-info text-decoration-none"
+                style="cursor: pointer"
+                >View item</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="card m-auto mb-3 border-beige"
+          style="max-width: 19rem; border-radius: 0px"
+        >
+          <div class="m-2">
+            <img
+              src="/assets/img/geometric-gd0aab62f5_640_4_edited.jpg"
+              class="img-fluid"
+              style="border-radius: 0px"
+              height="100%"
+              width="100%"
+              alt=""
+            />
+            <div class="card-body">
+              <div class="d-flex mt-2">
+                <img
+                  src="/assets/icons/profile.png"
+                  alt="timer"
+                  width="25"
+                  height="25"
+                />
+                <p class="ms-2">John Smith</p>
+              </div>
+              <h2 class="card-title fs-4 text-center mt-2">
+                Object up for auction
+              </h2>
               <div class="d-flex justify-content-end mt-4">
                 <img
                   src="/assets/icons/timer.png"
@@ -481,50 +548,18 @@
               alt=""
             />
             <div class="card-body">
-              <h2 class="card-title fs-4 text-center">Object up for auction</h2>
-              <div class="d-flex justify-content-end mt-4">
+              <div class="d-flex mt-2">
                 <img
-                  src="/assets/icons/timer.png"
+                  src="/assets/icons/profile.png"
                   alt="timer"
                   width="25"
                   height="25"
                 />
-                <p class="ms-2">12.24.22 23:59</p>
+                <p class="ms-2">John Smith</p>
               </div>
-            </div>
-          </div>
-          <div
-            class="card-footer bg-transparent border-beige d-flex justify-content-around align-items-center p-0"
-          >
-            <div class="text-center text-secondary mt-2">
-              <p class="mb-1">Current Bid:</p>
-              <p class="mb-2 fw-bold">$105</p>
-            </div>
-            <div class="text-center">
-              <a
-                href="/pages/auction-specific.html"
-                class="text-info text-decoration-none"
-                style="cursor: pointer"
-                >View item</a
-              >
-            </div>
-          </div>
-        </div>
-        <div
-          class="card m-auto mb-3 border-beige"
-          style="max-width: 19rem; border-radius: 0px"
-        >
-          <div class="m-2">
-            <img
-              src="/assets/img/geometric-gd0aab62f5_640_4_edited.jpg"
-              class="img-fluid"
-              style="border-radius: 0px"
-              height="100%"
-              width="100%"
-              alt=""
-            />
-            <div class="card-body">
-              <h2 class="card-title fs-4 text-center">Object up for auction</h2>
+              <h2 class="card-title fs-4 text-center mt-2">
+                Object up for auction
+              </h2>
               <div class="d-flex justify-content-end mt-4">
                 <img
                   src="/assets/icons/timer.png"
