@@ -4,6 +4,7 @@ $dark-blue: #003d5c;
 $orange: #df7356;
 $teal: #006a7f;
 $beige: #b8b89f;
+$light-beige: #e9e9db;
 $light-red: #d95b5b;
 $white: #fff;
 
@@ -13,6 +14,7 @@ $info: $orange;
 $buttonbg: $orange;
 $buttonbg-login: $teal;
 $beige: $beige;
+$light-beige: $light-beige;
 
 $theme-colors: (
   "primary": $primary,
@@ -21,6 +23,5 @@ $theme-colors: (
   "buttonbg-login": $buttonbg-login,
   "info": $info,
   "beige": $beige,
+  "light-beige": $light-beige,
 );
-
-// $headings-color: $yellow;
