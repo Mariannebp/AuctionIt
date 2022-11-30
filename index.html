@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AuctionIt</title>
     <link rel="stylesheet" href="/dist/css/styles.css" />
-    <!-- <script type="module" src="/js/index.mjs" defer></script> -->
+    <script type="module" src="/src/js/index.mjs" defer></script>
     <script
       src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
       defer
@@ -90,27 +90,25 @@
                 />
               </a>
               <ul class="dropdown-menu text-small">
-                <li>
-                  <a
-                    class="dropdown-item"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modalNewListing"
-                  >
-                    New Listing
-                  </a>
+                <li
+                  class="dropdown-item"
+                  style="cursor: pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalNewListing"
+                >
+                  New Listing
                 </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modalUpdateAvatar"
-                  >
-                    Update Avatar
-                  </a>
+                <li
+                  class="dropdown-item"
+                  style="cursor: pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalUpdateAvatar"
+                >
+                  Update Avatar
                 </li>
                 <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href=""> Log Out </a>
+                <li class="dropdown-item" id="logout" style="cursor: pointer">
+                  Log Out
                 </li>
               </ul>
             </div>
@@ -124,7 +122,7 @@
             <div
               class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
             >
-              <form class="modal-content" id="loginform">
+              <form class="modal-content" id="loginForm">
                 <div class="d-flex">
                   <h1 class="modal-title fs-4 m-auto ms-5 mt-4">Log In</h1>
                   <button
@@ -140,31 +138,33 @@
                       class="form-control"
                       type="text"
                       name="email"
-                      id="floatingEmail"
+                      id="floatingEmailLogin"
                       placeholder="Email"
                       required
                       pattern="^[\w\-.]+@stud.noroff.no$"
                       title="Email address must end with @stud.noroff.no"
                     />
-                    <label for="floatingEmail" class="ms-3">Email</label>
+                    <label for="floatingEmailLogin" class="ms-3">Email</label>
                   </div>
                   <div class="form-floating mb-3">
                     <input
                       class="form-control"
                       type="password"
                       name="password"
-                      id="floatingPassword"
+                      id="floatingPasswordLogin"
                       placeholder="Password"
                       required
                       minlength="8"
                       title="Password must be at least 8 characters long"
                     />
-                    <label for="floatingPassword" class="ms-3">Password</label>
+                    <label for="floatingPasswordLogin" class="ms-3"
+                      >Password</label
+                    >
                   </div>
                 </div>
                 <div class="d-block text-end">
                   <button
-                    type="button"
+                    type="submit"
                     class="btn btn-buttonbg text-white ps-4 pe-4 me-4"
                     style="border-radius: 0px"
                   >
@@ -196,7 +196,7 @@
             <div
               class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
             >
-              <form class="modal-content" id="loginform">
+              <form class="modal-content" id="registerForm">
                 <div class="d-flex">
                   <h1 class="modal-title fs-4 m-auto ms-5 mt-4">
                     Register New User
@@ -214,55 +214,61 @@
                       class="form-control"
                       type="text"
                       name="name"
-                      id="floatingEmail"
+                      id="floatingNameRegister"
                       placeholder="Name"
                       required
                       pattern="^[\w]+$"
                       title="Make sure to only use lower and upper case letters, numbers and underscore"
                     />
-                    <label for="floatingEmail" class="ms-3">Name</label>
+                    <label for="floatingNameRegister" class="ms-3">Name</label>
                   </div>
                   <div class="form-floating mb-3">
                     <input
                       class="form-control"
                       type="text"
                       name="email"
-                      id="floatingEmail"
+                      id="floatingEmailRegister"
                       placeholder="Email"
                       required
                       pattern="^[\w\-.]+@stud.noroff.no$"
                       title="Email address must end with @stud.noroff.no"
                     />
-                    <label for="floatingEmail" class="ms-3">Email</label>
+                    <label for="floatingEmailRegister" class="ms-3"
+                      >Email</label
+                    >
                   </div>
                   <div class="form-floating mb-3">
                     <input
                       class="form-control"
                       type="password"
                       name="password"
-                      id="floatingPassword"
+                      id="floatingPasswordRegister"
                       placeholder="Password"
                       required
                       minlength="8"
                       title="Password must be at least 8 characters long"
                     />
-                    <label for="floatingPassword" class="ms-3">Password</label>
+                    <label for="floatingPasswordRegister" class="ms-3"
+                      >Password</label
+                    >
                   </div>
                   <div class="form-floating mb-3">
                     <input
                       class="form-control"
                       type="uri"
                       name="avatar"
-                      id="floatingAvatar"
+                      id="floatingAvatarRegister"
                       placeholder="Avatar"
                       required
                     />
-                    <label for="floatingAvatar" class="ms-3">Avatar</label>
+                    <label for="floatingAvatarRegister" class="ms-3"
+                      >Avatar</label
+                    >
                   </div>
                 </div>
                 <div class="text-end mb-4">
                   <button
-                    type="button"
+                    type="submit"
                     class="btn btn-buttonbg text-white ps-4 pe-4 me-4"
                     style="border-radius: 0px"
                   >
@@ -374,7 +380,7 @@
             <div
               class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
             >
-              <form class="modal-content" id="loginform">
+              <form class="modal-content" id="updateAvatarForm">
                 <div class="d-flex">
                   <h1 class="modal-title fs-4 m-auto ms-5 mt-4">
                     Update Avatar
