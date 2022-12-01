@@ -27,7 +27,7 @@ export async function login(profile) {
 
   if (response.ok) {
     alert("You logged in!");
-    location.href = "/pages/profile.html";
+    location.href = "profile.html";
   } else {
     alert("Something went wrong, please try again")
   }

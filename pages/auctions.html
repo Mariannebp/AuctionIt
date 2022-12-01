@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AuctionIt - All Auctions</title>
     <link rel="stylesheet" href="/dist/css/styles.css" />
-    <!-- <script type="module" src="/js/index.mjs" defer></script> -->
+    <script type="module" src="/src/js/index.mjs" defer></script>
     <script
       src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
       defer
@@ -29,8 +29,8 @@
                 <img
                   src="/assets/icons/menu.png"
                   alt="main-menu"
-                  width="32"
-                  height="32"
+                  width="28"
+                  height="28"
                 />
               </a>
               <ul class="dropdown-menu text-small">
@@ -56,219 +56,63 @@
               <h1 class="m-auto ms-4" id="logo">Auction<span>it</span></h1>
             </a>
           </div>
-          <div class="col-md d-flex align-items-center justify-content-center">
-            <h3 class="m-auto me-3 fs-6 text-secondary">
-              Credits: $<span class="" id="credits"></span>
-            </h3>
-            <div class="text-end" id="logInButton">
-              <button
-                class="btn btn-buttonbg-login text-white ps-4 pe-4"
-                type="button"
-                style="border-radius: 0px"
-                data-bs-toggle="modal"
-                data-bs-target="#modalLogin"
-              >
-                LOG IN
-              </button>
-            </div>
-            <div class="p-0 dropdown" if="iconLoggedIn">
-              <a
-                href="#"
-                class="d-block link-info text-decoration-none"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <img
-                  src="/assets/icons/profile.png"
-                  alt="main-menu"
-                  width="32"
-                  height="32"
-                />
-              </a>
-              <ul class="dropdown-menu text-small">
-                <li>
-                  <a
+          <div
+            class="col-md mb-2 d-flex align-items-center justify-content-md-end"
+          >
+            <div class="d-flex align-items-center justify-content-center">
+              <h3 class="m-auto me-3 fs-6 text-secondary">
+                Credits: $<span id="credits"></span>
+              </h3>
+              <div class="p-0 dropdown" id="iconLoggedIn">
+                <a
+                  href="#"
+                  class="d-block link-info text-decoration-none"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="/assets/icons/profile.png"
+                    alt="main-menu"
+                    width="32"
+                    height="32"
+                  />
+                </a>
+                <ul class="dropdown-menu text-small">
+                  <li
                     class="dropdown-item"
+                    style="cursor: pointer"
                     data-bs-toggle="modal"
                     data-bs-target="#modalNewListing"
                   >
                     New Listing
-                  </a>
-                </li>
-                <li>
-                  <a
+                  </li>
+                  <li
                     class="dropdown-item"
+                    style="cursor: pointer"
                     data-bs-toggle="modal"
                     data-bs-target="#modalUpdateAvatar"
                   >
                     Update Avatar
-                  </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href=""> Log Out </a>
-                </li>
-              </ul>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li class="dropdown-item" id="logout" style="cursor: pointer">
+                    Log Out
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-end" id="logInButton">
+              <a href="/pages/login.html">
+                <button
+                  class="btn btn-buttonbg-login text-white ps-4 pe-4"
+                  type="button"
+                  style="border-radius: 0px"
+                >
+                  LOG IN
+                </button>
+              </a>
             </div>
           </div>
-          <div
-            class="modal fade"
-            id="modalLogin"
-            data-bs-backdrop="static"
-            tabindex="-1"
-          >
-            <div
-              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-            >
-              <form class="modal-content" id="loginform">
-                <div class="d-flex">
-                  <h1 class="modal-title fs-4 m-auto ms-5 mt-4">Log In</h1>
-                  <button
-                    type="button"
-                    class="btn-close me-5 mt-4"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="m-4 mt-5">
-                  <div class="form-floating mb-3">
-                    <input
-                      class="form-control"
-                      type="text"
-                      name="email"
-                      id="floatingEmail"
-                      placeholder="Email"
-                      required
-                      pattern="^[\w\-.]+@stud.noroff.no$"
-                      title="Email address must end with @stud.noroff.no"
-                    />
-                    <label for="floatingEmail" class="ms-3">Email</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input
-                      class="form-control"
-                      type="password"
-                      name="password"
-                      id="floatingPassword"
-                      placeholder="Password"
-                      required
-                      minlength="8"
-                      title="Password must be at least 8 characters long"
-                    />
-                    <label for="floatingPassword" class="ms-3">Password</label>
-                  </div>
-                </div>
-                <div class="d-block text-end">
-                  <button
-                    type="button"
-                    class="btn btn-buttonbg text-white ps-4 pe-4 me-4"
-                    style="border-radius: 0px"
-                  >
-                    LOG IN
-                  </button>
-                </div>
-                <div class="text-center">
-                  <p class="m-3 text-primary">
-                    New user?<a
-                      class="text-info text-decoration-none"
-                      style="cursor: pointer"
-                      data-bs-toggle="modal"
-                      data-bs-target="#modalRegister"
-                    >
-                      Register a new account here</a
-                    >
-                  </p>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <div
-            class="modal fade"
-            id="modalRegister"
-            data-bs-backdrop="static"
-            tabindex="-1"
-          >
-            <div
-              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-            >
-              <form class="modal-content" id="loginform">
-                <div class="d-flex">
-                  <h1 class="modal-title fs-4 m-auto ms-5 mt-4">
-                    Register New User
-                  </h1>
-                  <button
-                    type="button"
-                    class="btn-close me-5 mt-4"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="m-4 mt-5">
-                  <div class="form-floating mb-3">
-                    <input
-                      class="form-control"
-                      type="text"
-                      name="name"
-                      id="floatingEmail"
-                      placeholder="Name"
-                      required
-                      pattern="^[\w]+$"
-                      title="Make sure to only use lower and upper case letters, numbers and underscore"
-                    />
-                    <label for="floatingEmail" class="ms-3">Name</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input
-                      class="form-control"
-                      type="text"
-                      name="email"
-                      id="floatingEmail"
-                      placeholder="Email"
-                      required
-                      pattern="^[\w\-.]+@stud.noroff.no$"
-                      title="Email address must end with @stud.noroff.no"
-                    />
-                    <label for="floatingEmail" class="ms-3">Email</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input
-                      class="form-control"
-                      type="password"
-                      name="password"
-                      id="floatingPassword"
-                      placeholder="Password"
-                      required
-                      minlength="8"
-                      title="Password must be at least 8 characters long"
-                    />
-                    <label for="floatingPassword" class="ms-3">Password</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input
-                      class="form-control"
-                      type="uri"
-                      name="avatar"
-                      id="floatingAvatar"
-                      placeholder="Avatar"
-                      required
-                    />
-                    <label for="floatingAvatar" class="ms-3">Avatar</label>
-                  </div>
-                </div>
-                <div class="text-end mb-4">
-                  <button
-                    type="button"
-                    class="btn btn-buttonbg text-white ps-4 pe-4 me-4"
-                    style="border-radius: 0px"
-                  >
-                    REGISTER
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-
           <div
             class="modal fade"
             id="modalNewListing"
@@ -370,7 +214,7 @@
             <div
               class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
             >
-              <form class="modal-content" id="loginform">
+              <form class="modal-content" id="updateAvatarForm">
                 <div class="d-flex">
                   <h1 class="modal-title fs-4 m-auto ms-5 mt-4">
                     Update Avatar

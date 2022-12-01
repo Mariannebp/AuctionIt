@@ -21,10 +21,9 @@ export async function register(profile) {
 
   if (response.ok) {
     alert("Registration was successful");
-    location.href = document.getElementById("modalLogin").show;
+    location.href = "login.html";
 
   } else {
     alert("Something went wrong, please try again")
   }
 }
-

@@ -4,7 +4,7 @@ import { register } from "../api/auth/register.mjs";
  * A listener for when new users register
  */
 export function setRegisterUserFormListener() {
-  const form = document.querySelector("#modalRegister");
+  const form = document.querySelector("#formRegister");
 
   if (form) {
     form.addEventListener("submit", event => {
@@ -14,7 +14,7 @@ export function setRegisterUserFormListener() {
       const formData = new FormData(form);
       const profile = Object.fromEntries(formData.entries());
 
-      register(profile)
+      register(profile);
     })
   }
 }
