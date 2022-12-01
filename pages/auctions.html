@@ -60,22 +60,20 @@
             class="col-md mb-2 d-flex align-items-center justify-content-md-end"
           >
             <div class="d-flex align-items-center justify-content-center">
-              <h3 class="m-auto me-3 fs-6 text-secondary">
+              <h3
+                class="m-auto me-3 fs-6 text-secondary"
+                id="userCreditsContainer"
+              >
                 Credits: $<span id="credits"></span>
               </h3>
-              <div class="p-0 dropdown" id="iconLoggedIn">
+              <div class="p-0 dropdown" id="userMenu">
                 <a
                   href="#"
-                  class="d-block link-info text-decoration-none"
+                  class="d-block text-decoration-none dropdown-toggle"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  id="userIcon"
                 >
-                  <img
-                    src="/assets/icons/profile.png"
-                    alt="main-menu"
-                    width="32"
-                    height="32"
-                  />
                 </a>
                 <ul class="dropdown-menu text-small">
                   <li
