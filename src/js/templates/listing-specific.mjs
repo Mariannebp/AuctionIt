@@ -7,7 +7,7 @@ export function listingTemplate(listingsData) {
   const headTitle = document.querySelector("title");
   const navTitle = document.querySelector("#auctionSpecificDropdown");
 
-  headTitle.innerHTML = title;
+  headTitle.innerHTML = `${title} - AuctionIt`;
   navTitle.innerHTML = title;
 
   const listingContainer = document.createElement("div");
