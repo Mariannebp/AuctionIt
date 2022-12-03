@@ -9,6 +9,7 @@ const path = location.pathname;
 
 if (path === "/index.html") {
   checkIfLoggedIn();
+  listings.getListingsFeedHome();
   listings.logoutListener();
 } else if (path === "/pages/login.html") {
   listings.setLoginUserFormListener();
