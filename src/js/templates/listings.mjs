@@ -1,10 +1,9 @@
 export function listingTemplate(listingsData) {
   const { id, title, media, endsAt, _count } = listingsData;
   const { bids } = _count;
-  // similar consts for media and bids???
 
   const listingContainer = document.createElement("div");
-  listingContainer.classList.add("col");
+  listingContainer.classList.add("col", "mb-5");
 
   const listingCard = document.createElement("div");
   listingCard.classList.add(
@@ -33,24 +32,12 @@ export function listingTemplate(listingsData) {
     listingContent.append(listingMedia);
   }
 
-  // media.forEach(i => {
-  //   if (i) {
-  //     const listingMedia = document.createElement("img");
-
-  //     listingMedia.classList.add("img-fluid");
-  //     listingMedia.setAttribute("style", "width: 18rem");
-  //     listingMedia.src = media;
-  //     listingMedia.alt = `Image from ${title}`;
-  //     listingContent.append(listingMedia);
-  //   }
-  // })
-
   const listingInfo = document.createElement("div");
   listingInfo.classList.add("card-body");
   listingContent.append(listingInfo);
 
   const listingTitle = document.createElement("h2");
-  listingTitle.classList.add("card-title", "fs-4", "text-center", "mt-4");
+  listingTitle.classList.add("card-title", "fs-5", "text-center", "mt-4");
   listingTitle.innerHTML = title;
   listingInfo.append(listingTitle);
 
