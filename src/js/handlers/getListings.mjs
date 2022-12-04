@@ -12,7 +12,7 @@ export async function getListingsFeed() {
 }
 
 export async function getListingsSearched() {
-  const listings = await list.getListingsMany();
+  const listings = await list.getListings();
   const container = document.querySelector("#allAuctions");
   renderListingsSearched(listings, container);
 }

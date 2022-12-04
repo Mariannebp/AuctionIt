@@ -3,7 +3,7 @@ import { authFetch } from "../authFetch.mjs";
 
 const action = "/listings";
 const few = "?limit=3";
-const many = "?limit=300";
+const many = "?limit=200";
 const seller = "?_seller=true";
 const bids = "&_bids=true";
 
