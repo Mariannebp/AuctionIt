@@ -1,5 +1,7 @@
 import { getProfile } from "./api/profile/profile.mjs";
 import { checkIfLoggedIn } from "./api/profile/header.mjs";
+import { checkIfLoggedInContent } from "./api/profile/loggedin-content.mjs";
+
 import * as listings from "./handlers/index.mjs";
 
 // import { getListing } from "./api/listings/get.mjs";
@@ -17,6 +19,7 @@ if (path === "/index.html") {
   listings.setRegisterUserFormListener();
 } else if (path === "/pages/profile.html") {
   checkIfLoggedIn();
+  checkIfLoggedInContent();
   getProfile();
   listings.logoutListener();
 } else if (path === "/pages/auctions.html") {
@@ -25,6 +28,7 @@ if (path === "/index.html") {
   listings.logoutListener();
 } else if (path === "/pages/auction-specific.html") {
   checkIfLoggedIn();
+  checkIfLoggedInContent();
   listings.getListingSpecific();
   listings.logoutListener();
 }
