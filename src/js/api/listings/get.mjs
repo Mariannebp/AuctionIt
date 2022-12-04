@@ -3,6 +3,7 @@ import { authFetch } from "../authFetch.mjs";
 
 const action = "/listings";
 const few = "?limit=3";
+const many = "?limit=300";
 const seller = "?_seller=true";
 const bids = "&_bids=true";
 
@@ -15,6 +16,13 @@ export async function getListings() {
 
 export async function getListingsFew() {
   const getListingsUrl = `${auctionBaseUrl}${action}${few}`;
+  const response = await authFetch(getListingsUrl);
+
+  return await response.json();
+}
+
+export async function getListingsMany() {
+  const getListingsUrl = `${auctionBaseUrl}${action}${many}`;
   const response = await authFetch(getListingsUrl);
 
   return await response.json();

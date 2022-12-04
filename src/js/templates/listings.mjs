@@ -100,3 +100,20 @@ export function listingTemplate(listingsData) {
 export function renderListings(listingsDataList, parent) {
   parent.append(...listingsDataList.map(listingTemplate));
 }
+
+export function renderListingsSearched(listingsDataList, parent) {
+  const searchInput = document.querySelector("#search");
+
+  searchInput.addEventListener("input", (e) => {
+    let searchValue = e.target.value.toLowerCase();
+    console.log(searchValue);
+    const container = document.querySelector("#allAuctions");
+    container.innerHTML = "";
+
+    listingsDataList.forEach((i) => {
+      if (i.title.toLowerCase().startsWith(searchValue)) {
+        parent.append(listingTemplate(i));
+      }
+    });
+  });
+}

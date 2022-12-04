@@ -1,16 +1,10 @@
-import { getProfile } from "./api/profile/profile.mjs";
-import { checkIfLoggedIn } from "./api/profile/header.mjs";
-import { checkIfLoggedInContent } from "./api/profile/loggedin-content.mjs";
-
+import * as profile from "./api/profile/index.mjs";
 import * as listings from "./handlers/index.mjs";
 
-// import { getListing } from "./api/listings/get.mjs";
-
 const path = location.pathname;
-// const profile = load("profile");
 
 if (path === "/index.html") {
-  checkIfLoggedIn();
+  profile.checkIfLoggedIn();
   listings.getListingsFeedHome();
   listings.logoutListener();
 } else if (path === "/pages/login.html") {
@@ -18,19 +12,18 @@ if (path === "/index.html") {
 } else if (path === "/pages/register.html") {
   listings.setRegisterUserFormListener();
 } else if (path === "/pages/profile.html") {
-  checkIfLoggedIn();
-  checkIfLoggedInContent();
-  getProfile();
+  profile.checkIfLoggedIn();
+  profile.checkIfLoggedInContent();
+  profile.getProfile();
   listings.logoutListener();
 } else if (path === "/pages/auctions.html") {
-  checkIfLoggedIn();
+  profile.checkIfLoggedIn();
   listings.getListingsFeed();
+  listings.getListingsSearched();
   listings.logoutListener();
 } else if (path === "/pages/auction-specific.html") {
-  checkIfLoggedIn();
-  checkIfLoggedInContent();
+  profile.checkIfLoggedIn();
+  profile.checkIfLoggedInContent();
   listings.getListingSpecific();
   listings.logoutListener();
 }
-
-// getListing("cb08411f-1096-400d-abe4-73727bfb269f");
