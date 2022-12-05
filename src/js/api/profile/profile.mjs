@@ -8,7 +8,6 @@ export function getProfile() {
 
   const userInfo = load("profile");
   const { name, email, credits, avatar } = userInfo;
-  console.log(userInfo);
   userName.innerHTML = name;
   userEmail.innerHTML = email;
   userCredits.innerHTML = credits;
