@@ -2,8 +2,6 @@ export function listingTemplate(listingsData) {
   const { title, description, media, endsAt, bids, seller } = listingsData;
   const { name, avatar } = seller;
 
-  console.log(listingsData);
-
   const headTitle = document.querySelector("title");
   const navTitle = document.querySelector("#auctionSpecificDropdown");
 
