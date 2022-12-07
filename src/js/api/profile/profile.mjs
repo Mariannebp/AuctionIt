@@ -14,12 +14,14 @@ export function getProfile() {
 
   if (avatar) {
     const img = document.createElement("img");
+    img.classList.add("img-fluid");
     img.src = avatar;
     img.width = "200";
     img.alt = `Profile image of ${name}`;
     userAvatar.append(img);
   } else {
     const img = document.createElement("img");
+    img.classList.add("img-fluid");
     img.src = "/assets/icons/profile.png";
     img.width = "150";
     img.alt = "Profile image default";

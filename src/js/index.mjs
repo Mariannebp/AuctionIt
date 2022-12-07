@@ -17,6 +17,7 @@ if (path === "/index.html") {
   profile.checkIfLoggedIn();
   profile.checkIfLoggedInContent();
   profile.getProfile();
+  handler.getListingsProfile();
   handler.setCreateListingListener();
   handler.setUpdateAvatarListener();
   handler.logoutListener();

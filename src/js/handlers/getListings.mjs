@@ -3,6 +3,7 @@ import {
   renderListingsSearched,
 } from "../templates/listings.mjs";
 import { renderListingSpecific } from "../templates/listing-specific.mjs";
+import { renderListingsProfile } from "../templates/listings-profile.mjs";
 import * as list from "../api/listings/get.mjs";
 
 export async function getListingsFeed() {
@@ -31,4 +32,10 @@ export async function getListingSpecific() {
   const listing = await list.getListing(id);
   const container = document.querySelector("#auctionSpecific");
   renderListingSpecific(listing, container);
+}
+
+export async function getListingsProfile() {
+  const listings = await list.getListingsByProfile();
+  const container = document.querySelector("#usersListings");
+  renderListingsProfile(listings, container);
 }
