@@ -15,12 +15,8 @@ export async function updateAvatar(avatarData) {
     body: JSON.stringify(avatarData),
   });
 
-  const user = await response.json();
-
-  console.log(user);
   if (response.ok) {
-    storage.save("profile", user);
-    location.href = "profile.html";
+    location.reload();
   } else {
     alert("Something went wrong, please make sure you enter a valid url");
   }
