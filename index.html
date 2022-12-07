@@ -141,8 +141,6 @@
                       id="floatingTitle"
                       placeholder="Title"
                       required
-                      pattern="^[\w]+$"
-                      title="Make sure to only use lower and upper case letters, numbers and underscore"
                     />
                     <label for="floatingEmail" class="ms-3">Title</label>
                   </div>
@@ -166,8 +164,12 @@
                       name="tags"
                       id="floatingTags"
                       placeholder="Tags"
+                      title="Separate multiple tags with ', '"
                     />
                     <label for="floatingTags" class="ms-3">Tags</label>
+                    <p class="ms-3 fs-italic">
+                      Separate multiple tags with ', '
+                    </p>
                   </div>
                   <div class="form-floating mb-3">
                     <input
@@ -176,13 +178,18 @@
                       name="media"
                       id="floatingMedia"
                       placeholder="Media"
+                      required
+                      title="Please enter valid urls, and separate them with ', '"
                     />
                     <label for="floatingMedia" class="ms-3">Media</label>
+                    <p class="ms-3 fs-italic">
+                      Please enter valid urls, and separate them with ', '
+                    </p>
                   </div>
                   <div class="form-floating mb-3">
                     <input
                       class="form-control"
-                      type="string"
+                      type="datetime-local"
                       name="Ends At"
                       id="floatingEndsAt"
                       placeholder="Ends At"
@@ -194,7 +201,7 @@
                 </div>
                 <div class="text-end mb-4">
                   <button
-                    type="button"
+                    type="submit"
                     class="btn btn-buttonbg text-white ps-4 pe-4 me-4"
                     style="border-radius: 0px"
                   >
