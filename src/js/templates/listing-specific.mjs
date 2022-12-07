@@ -20,31 +20,43 @@ export function listingTemplate(listingsData) {
 
   listingContainer.append(listingTitle, listingBody);
 
-  const listingMediaMain = document.createElement("img");
-  listingMediaMain.src = media[0];
-  listingMediaMain.alt = `Image for ${media}`;
-  listingMediaMain.classList.add("img-fluid", "mt-5", "mb-4");
-  listingMediaMain.setAttribute("style", "width: 500px; height: 100%;");
-
-  const listingMediaGallery = document.createElement("div");
-  listingMediaGallery.classList.add(
-    "row",
-    "row-cols-md-2",
-    "row-cols-lg-3",
-    "row-cols-xl-4",
-    "justify-content-center",
-    "g-3"
-  );
-
-  listingBody.append(listingMediaMain, listingMediaGallery);
-
-  for (let i = 1; i < media.length; i++) {
+  if (media.length) {
     const listingMediaMain = document.createElement("img");
-    listingMediaMain.src = media[i];
+    listingMediaMain.src = media[0];
     listingMediaMain.alt = `Image for ${media}`;
-    listingMediaMain.classList.add("col", "img-fluid", "mt-5", "mb-4");
-    listingMediaMain.setAttribute("style", "width: 200px; height: 100%;");
-    listingMediaGallery.append(listingMediaMain);
+    listingMediaMain.classList.add("img-fluid", "mt-5", "mb-4");
+    listingMediaMain.setAttribute("style", "width: 500px; height: 100%;");
+
+    const listingMediaGallery = document.createElement("div");
+    listingMediaGallery.classList.add(
+      "row",
+      "row-cols-md-2",
+      "row-cols-lg-3",
+      "row-cols-xl-4",
+      "justify-content-center",
+      "g-3"
+    );
+
+    listingBody.append(listingMediaMain, listingMediaGallery);
+
+    for (let i = 1; i < media.length; i++) {
+      const listingMediaMain = document.createElement("img");
+      listingMediaMain.src = media[i];
+      listingMediaMain.alt = `Image for ${media}`;
+      listingMediaMain.classList.add("col", "img-fluid", "mt-5", "mb-4");
+      listingMediaMain.setAttribute("style", "width: 200px; height: 100%;");
+      listingMediaGallery.append(listingMediaMain);
+    }
+  } else {
+    const listingMedia = document.createElement("div");
+    listingMedia.classList.add("m-auto", "border", "mt-5", "mb-4");
+    listingMedia.setAttribute("style", "height: 200px; max-width: 500px;");
+    listingBody.append(listingMedia);
+
+    const listingMediaInner = document.createElement("div");
+    listingMediaInner.classList.add("m-3", "border");
+    listingMediaInner.setAttribute("style", "height: 166px; max-width: 100%;");
+    listingMedia.append(listingMediaInner);
   }
 
   const listingInfo = document.createElement("div");

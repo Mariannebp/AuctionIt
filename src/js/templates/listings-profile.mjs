@@ -23,13 +23,23 @@ export function listingTemplate(listingsData) {
   listingContent.classList.add("m-2", "mb-auto", "text-center");
   listingCard.append(listingContent);
 
-  if (media) {
+  if (media.length) {
     const listingMedia = document.createElement("img");
     listingMedia.classList.add("img-fluid");
     listingMedia.setAttribute("style", "max-height: 200px; max-width: 100%;");
     listingMedia.src = media[0];
     listingMedia.alt = `Image for ${title}`;
     listingContent.append(listingMedia);
+  } else {
+    const listingMedia = document.createElement("div");
+    listingMedia.classList.add("m-3", "border");
+    listingMedia.setAttribute("style", "height: 200px; max-width: 100%;");
+    listingContent.append(listingMedia);
+
+    const listingMediaInner = document.createElement("div");
+    listingMediaInner.classList.add("m-3", "border");
+    listingMediaInner.setAttribute("style", "height: 166px; max-width: 100%;");
+    listingMedia.append(listingMediaInner);
   }
 
   const listingInfo = document.createElement("div");
