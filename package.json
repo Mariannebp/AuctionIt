@@ -7,9 +7,9 @@
     "build": "sass src/scss:dist/css",
     "watch": "sass --watch src/scss:dist/css",
     "test": "npm test",
-    "format": "prettier -w src/js/**/*.js",
-    "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js --cache --fix",
+    "format": "prettier -w src/**/*.mjs",
+    "lint": "eslint src/**/*.mjs",
+    "lint-fix": "eslint src/**/*.mjs --cache --fix",
     "prepare": "husky install",
     "vite-dev": "vite",
     "vite-build": "vite-build",
@@ -37,7 +37,7 @@
     "bootstrap": "^5.2.3"
   },
   "lint-staged": {
-    "*.js": [
+    "*.mjs": [
       "eslint --fix",
       "prettier --write"
     ],

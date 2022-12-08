@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AuctionIt - Profile</title>
+    <title>AuctionIt</title>
     <link rel="stylesheet" href="/dist/css/styles.css" />
     <script type="module" src="/src/js/index.mjs" defer></script>
     <script
@@ -15,9 +15,9 @@
   <body class="d-flex flex-column min-vh-100">
     <header class="mt-3">
       <div class="container">
-        <div class="row d-flex align-items-center justify-content-center">
+        <div class="row align-items-center justify-content-start">
           <div
-            class="col-md d-flex align-items-center justify-content-center justify-content-lg-start"
+            class="col-md-auto d-flex align-items-center justify-content-center justify-content-sm-start"
           >
             <div class="p-0 dropdown">
               <a
@@ -43,8 +43,13 @@
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item fst-italic text-secondary" href="#">
+                  <a class="dropdown-item" href="/pages/profile.html">
                     Profile
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item fst-italic text-secondary" href="#">
+                    Log In
                   </a>
                 </li>
               </ul>
@@ -56,61 +61,7 @@
               <h1 class="m-auto ms-4" id="logo">Auction<span>it</span></h1>
             </a>
           </div>
-          <div
-            class="col-md mb-2 d-flex align-items-center justify-content-md-end"
-          >
-            <div class="d-flex align-items-center justify-content-center">
-              <h3
-                class="m-auto me-3 fs-6 text-secondary"
-                id="userCreditsContainer"
-              >
-                Credits: $<span id="credits"></span>
-              </h3>
-              <div class="p-0 dropdown" id="userMenu">
-                <a
-                  href="#"
-                  class="d-block text-decoration-none dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  id="userIcon"
-                >
-                </a>
-                <ul class="dropdown-menu text-small">
-                  <li
-                    class="dropdown-item"
-                    style="cursor: pointer"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modalNewListing"
-                  >
-                    New Listing
-                  </li>
-                  <li
-                    class="dropdown-item"
-                    style="cursor: pointer"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modalUpdateAvatar"
-                  >
-                    Update Avatar
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li class="dropdown-item" id="logout" style="cursor: pointer">
-                    Log Out
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="text-end" id="logInButton">
-              <a href="/pages/login.html">
-                <button
-                  class="btn btn-buttonbg-login text-white ps-4 pe-4"
-                  type="button"
-                  style="border-radius: 0px"
-                >
-                  LOG IN
-                </button>
-              </a>
-            </div>
-          </div>
+
           <div
             class="modal fade"
             id="modalNewListing"
@@ -139,6 +90,8 @@
                       id="floatingTitle"
                       placeholder="Title"
                       required
+                      pattern="^[\w]+$"
+                      title="Make sure to only use lower and upper case letters, numbers and underscore"
                     />
                     <label for="floatingEmail" class="ms-3">Title</label>
                   </div>
@@ -162,12 +115,8 @@
                       name="tags"
                       id="floatingTags"
                       placeholder="Tags"
-                      title="Separate multiple tags with ', '"
                     />
                     <label for="floatingTags" class="ms-3">Tags</label>
-                    <p class="ms-3 fs-italic">
-                      Separate multiple tags with ', '
-                    </p>
                   </div>
                   <div class="form-floating mb-3">
                     <input
@@ -176,18 +125,13 @@
                       name="media"
                       id="floatingMedia"
                       placeholder="Media"
-                      required
-                      title="Please enter valid urls, and separate them with ', '"
                     />
                     <label for="floatingMedia" class="ms-3">Media</label>
-                    <p class="ms-3 fs-italic">
-                      Please enter valid urls, and separate them with ', '
-                    </p>
                   </div>
                   <div class="form-floating mb-3">
                     <input
                       class="form-control"
-                      type="datetime-local"
+                      type="string"
                       name="Ends At"
                       id="floatingEndsAt"
                       placeholder="Ends At"
@@ -199,7 +143,7 @@
                 </div>
                 <div class="text-end mb-4">
                   <button
-                    type="submit"
+                    type="button"
                     class="btn btn-buttonbg text-white ps-4 pe-4 me-4"
                     style="border-radius: 0px"
                   >
@@ -209,7 +153,6 @@
               </form>
             </div>
           </div>
-
           <div
             class="modal fade"
             id="modalUpdateAvatar"
@@ -247,11 +190,11 @@
                 </div>
                 <div class="d-block text-end mb-4">
                   <button
-                    type="submit"
+                    type="button"
                     class="btn btn-buttonbg text-white ps-4 pe-4 me-4"
                     style="border-radius: 0px"
                   >
-                    UPDATE
+                    Update
                   </button>
                 </div>
               </form>
@@ -268,44 +211,62 @@
         />
       </div>
     </header>
-    <main class="container mb-auto" style="max-width: 700px">
-      <section
-        class="row d-flex justify-content-between align-items-center text-center m-auto mt-5 mb-5"
-        style="max-width: 500px"
-      >
-        <div class="col-md mb-3" id="userAvatar">
-          <img
-            class="img-fluid"
-            style="width: 150px"
-            src="/assets/icons/profile.png"
-          />
-        </div>
-        <div class="col-md mb-3">
-          <div class="">
-            <h1 class="mb-4" id="userName">User Name</h1>
-            <h2 class="fs-6 text-secondary">
-              Email: <span class="text-black" id="userEmail"></span>
-            </h2>
-            <h2 class="fs-6 text-secondary">
-              Credits: $<span class="text-black" id="creditsProfile"></span>
-            </h2>
-            <h2 class="fs-6 text-secondary">
-              Wins: <span class="text-black" id="winsProfile"></span>
-            </h2>
+    <main class="form-signin mt-auto mb-auto">
+      <div class="shadow m-auto mb-4 p-3 w-75" style="max-width: 600px">
+        <form id="formLogin">
+          <h1 class="fs-4 m-auto ms-5 mt-4">Log In</h1>
+          <div class="m-4 mt-5">
+            <div class="form-floating mb-3">
+              <input
+                required
+                class="form-control"
+                type="text"
+                name="email"
+                id="floatingEmailLogin"
+                placeholder="Email"
+                pattern="^[\w\-.]+@stud.noroff.no$"
+                title="Email address must end with @stud.noroff.no"
+                style="border-radius: 0px"
+              />
+              <label for="floatingEmailLogin" class="ms-3">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                required
+                class="form-control"
+                type="password"
+                name="password"
+                id="floatingPasswordLogin"
+                placeholder="Password"
+                minlength="8"
+                title="Password must be at least 8 characters long"
+                style="border-radius: 0px"
+              />
+              <label for="floatingPasswordLogin" class="ms-3">Password</label>
+            </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <h3>Your items on auction</h3>
-        <p class="fs-6 text-secondary">
-          Number of listings:
-          <span class="text-black" id="listingsProfile"></span>
-        </p>
-        <div
-          class="mt-3 row row-cols-1 row-cols-lg-2 g-3"
-          id="usersListings"
-        ></div>
-      </section>
+          <div class="d-block text-end">
+            <button
+              type="submit"
+              class="btn btn-buttonbg text-white ps-4 pe-4 me-4"
+              style="border-radius: 0px"
+            >
+              LOG IN
+            </button>
+          </div>
+          <div class="text-center">
+            <p class="m-3 text-primary">
+              New user?<a
+                class="text-info text-decoration-none"
+                style="cursor: pointer"
+                href="/pages/register.html"
+              >
+                Register a new account here</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
     </main>
     <footer class="mt-5">
       <p class="text-center mb-1 mt-2">Semester Project 2</p>
