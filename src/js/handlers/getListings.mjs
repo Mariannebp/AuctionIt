@@ -23,6 +23,7 @@ export async function getListingSpecific() {
   const queryString = document.location.search;
   const params = new URLSearchParams(queryString);
   const id = params.get("id");
+  localStorage.setItem("listId", id);
 
   const listing = await list.getListing(id);
   const container = document.querySelector("#auctionSpecific");
