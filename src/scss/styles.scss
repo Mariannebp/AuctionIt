@@ -3,22 +3,23 @@
 
 @font-face {
   font-family: "Cinzel";
-  src: url("/assets/Fonts/Cinzel-VariableFont_wght.ttf") format("truetype");
+  src: url("../../assets/Fonts/Cinzel-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Lora Italic";
-  src: url("/assets/Fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("../../assets/Fonts/Lora-Italic-VariableFont_wght.ttf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "Lora";
-  src: url("/assets/Fonts/Lora-VariableFont_wght.ttf") format("truetype");
+  src: url("../../assets/Fonts/Lora-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Hind Madurai";
-  src: url("/assets/Fonts/HindMadurai-Regular.ttf") format("truetype");
+  src: url("../../assets/Fonts/HindMadurai-Regular.ttf") format("truetype");
 }
 
 header #logo {
