@@ -1,5 +1,5 @@
-import * as profile from "./api/profile/index.mjs";
-import * as handler from "./handlers/index.mjs";
+import * as profile from "../js/api/profile/index.mjs";
+import * as handler from "../js/handlers/index.mjs";
 
 const path = location.pathname;
 
