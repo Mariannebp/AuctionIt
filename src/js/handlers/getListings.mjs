@@ -4,7 +4,7 @@ import * as list from "../api/listings/get.mjs";
 export async function getListingsFeed() {
   const listings = await list.getListings();
   const container = document.querySelector("#allAuctions");
-  temp.renderListings(listings, container);
+  temp.renderListingsAll(listings, container);
 }
 
 export async function getListingsSearched() {
@@ -16,7 +16,7 @@ export async function getListingsSearched() {
 export async function getListingsFeedHome() {
   const listings = await list.getListingsFew();
   const container = document.querySelector("#latestAuctions");
-  temp.renderListings(listings, container);
+  temp.renderListingsHome(listings, container);
 }
 
 export async function getListingSpecific() {

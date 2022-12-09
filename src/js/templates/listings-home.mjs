@@ -1,5 +1,5 @@
 export function listingTemplate(listingsData) {
-  const { id, title, description, media, endsAt, _count } = listingsData;
+  const { id, title, media, endsAt, _count } = listingsData;
   const { bids } = _count;
 
   const listingContainer = document.createElement("div");
@@ -46,8 +46,8 @@ export function listingTemplate(listingsData) {
   listingInfo.classList.add("card-body");
   listingContent.append(listingInfo);
 
-  const listingTitle = document.createElement("h4");
-  listingTitle.classList.add("card-title", "text-center", "mt-4");
+  const listingTitle = document.createElement("h2");
+  listingTitle.classList.add("card-title", "fs-5", "text-center", "mt-4");
   listingTitle.innerHTML = title;
   listingInfo.append(listingTitle);
 
@@ -56,7 +56,7 @@ export function listingTemplate(listingsData) {
   listingInfo.append(listingEnds);
 
   const listingEndsIcon = document.createElement("img");
-  listingEndsIcon.src = "../assets/icons/timer.png";
+  listingEndsIcon.src = "./assets/icons/timer.png";
   listingEndsIcon.setAttribute("style", "max-width: 25px; height: 100%");
   listingEndsIcon.alt = "timer";
 
@@ -66,20 +66,6 @@ export function listingTemplate(listingsData) {
   listingEndsTime.innerHTML = date;
 
   listingEnds.append(listingEndsIcon, listingEndsTime);
-
-  const listingDesc = document.createElement("div");
-  listingDesc.classList.add("m-auto", "mb-3", "text-start");
-  listingDesc.setAttribute("style", "max-width: 260px");
-  listingContent.append(listingDesc);
-
-  const listingDescTitle = document.createElement("h5");
-  listingDescTitle.classList.add("fs-6");
-  listingDescTitle.innerHTML = "DESCRIPTION";
-
-  const listingDescText = document.createElement("p");
-  listingDescText.innerHTML = description;
-
-  listingDesc.append(listingDescTitle, listingDescText);
 
   const listingFooter = document.createElement("div");
   listingFooter.classList.add(
@@ -114,13 +100,13 @@ export function listingTemplate(listingsData) {
   const listingViewItemLink = document.createElement("a");
   listingViewItemLink.classList.add("text-info", "text-decoration-none");
   listingViewItemLink.setAttribute("style", "cursor: pointer;");
-  listingViewItemLink.href = `./auction-specific.html?id=${id}`;
+  listingViewItemLink.href = `./pages/auction-specific.html?id=${id}`;
   listingViewItemLink.innerHTML = "View Item";
   listingViewItem.append(listingViewItemLink);
 
   return listingContainer;
 }
 
-export function renderListingsProfile(listingsDataList, parent) {
+export function renderListingsHome(listingsDataList, parent) {
   parent.append(...listingsDataList.map(listingTemplate));
 }

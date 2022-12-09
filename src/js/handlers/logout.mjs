@@ -4,6 +4,6 @@ export function logoutListener() {
   const logoutButton = document.querySelector("#logout");
   logoutButton.addEventListener("click", () => {
     logout();
-    location.href = "/index.html";
-  })
+    location.reload();
+  });
 }

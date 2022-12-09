@@ -3,17 +3,25 @@ import * as handler from "./handlers/index.mjs";
 
 const path = location.pathname;
 
-if (path === "/index.html") {
+// For testing both - not working on launch //
+
+if (path === "/test/index.html" || path === "/index.html") {
   profile.checkIfLoggedIn();
   handler.getListingsFeedHome();
   handler.setCreateListingListener();
   handler.setUpdateAvatarListener();
   handler.logoutListener();
-} else if (path === "/pages/login.html") {
+} else if (path === "/test/pages/login.html" || path === "/pages/login.html") {
   handler.setLoginUserFormListener();
-} else if (path === "/pages/register.html") {
+} else if (
+  path === "/test/pages/register.html" ||
+  path === "/pages/register.html"
+) {
   handler.setRegisterUserFormListener();
-} else if (path === "/pages/profile.html") {
+} else if (
+  path === "/test/pages/profile.html" ||
+  path === "/pages/profile.html"
+) {
   profile.checkIfLoggedIn();
   profile.checkIfLoggedInContent();
   profile.getProfile();
@@ -21,14 +29,20 @@ if (path === "/index.html") {
   handler.setCreateListingListener();
   handler.setUpdateAvatarListener();
   handler.logoutListener();
-} else if (path === "/pages/auctions.html") {
+} else if (
+  path === "/test/pages/auctions.html" ||
+  path === "/pages/auctions.html"
+) {
   profile.checkIfLoggedIn();
   handler.getListingsFeed();
   handler.getListingsSearched();
   handler.setCreateListingListener();
   handler.setUpdateAvatarListener();
   handler.logoutListener();
-} else if (path === "/pages/auction-specific.html") {
+} else if (
+  path === "/test/pages/auction-specific.html" ||
+  path === "/pages/auction-specific.html"
+) {
   profile.checkIfLoggedIn();
   profile.checkIfLoggedInContent();
   handler.getListingSpecific();

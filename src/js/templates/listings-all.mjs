@@ -56,7 +56,7 @@ export function listingTemplate(listingsData) {
   listingInfo.append(listingEnds);
 
   const listingEndsIcon = document.createElement("img");
-  listingEndsIcon.src = "/assets/icons/timer.png";
+  listingEndsIcon.src = "../assets/icons/timer.png";
   listingEndsIcon.setAttribute("style", "max-width: 25px; height: 100%");
   listingEndsIcon.alt = "timer";
 
@@ -100,14 +100,14 @@ export function listingTemplate(listingsData) {
   const listingViewItemLink = document.createElement("a");
   listingViewItemLink.classList.add("text-info", "text-decoration-none");
   listingViewItemLink.setAttribute("style", "cursor: pointer;");
-  listingViewItemLink.href = `/pages/auction-specific.html?id=${id}`;
+  listingViewItemLink.href = `./auction-specific.html?id=${id}`;
   listingViewItemLink.innerHTML = "View Item";
   listingViewItem.append(listingViewItemLink);
 
   return listingContainer;
 }
 
-export function renderListings(listingsDataList, parent) {
+export function renderListingsAll(listingsDataList, parent) {
   parent.append(...listingsDataList.map(listingTemplate));
 }
 
