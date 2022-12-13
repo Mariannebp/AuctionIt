@@ -46,6 +46,6 @@ export function listingTemplate(listingsData) {
   }
 }
 
-export function renderListingSpecific(listingsDataSpecific, parent) {
-  parent.append(listingTemplate(listingsDataSpecific));
+export function renderListingSpecific(listingsDataSpecific) {
+  listingTemplate(listingsDataSpecific);
 }

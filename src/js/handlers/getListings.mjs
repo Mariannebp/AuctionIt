@@ -26,8 +26,7 @@ export async function getListingSpecific() {
   localStorage.setItem("listId", id);
 
   const listing = await list.getListing(id);
-  const container = document.querySelector("#auctionSpecific");
-  temp.renderListingSpecific(listing, container);
+  temp.renderListingSpecific(listing);
 }
 
 export async function getListingsProfile() {
