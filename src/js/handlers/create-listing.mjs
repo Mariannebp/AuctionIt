@@ -1,5 +1,8 @@
 import { createListing } from "../api/listings/create.mjs";
 
+/**
+ * A listener for when users are creating a new listing
+ */
 export function setCreateListingListener() {
   const form = document.querySelector("#newListingForm");
   const newTitle = document.querySelector("#floatingTitle");

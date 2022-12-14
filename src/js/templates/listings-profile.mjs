@@ -1,3 +1,7 @@
+/**
+ * Sets the template to display listings on the profile page
+ * @param {string} listingsData fetches the listing information to be displayed
+ */
 export function listingTemplate(listingsData) {
   const { id, title, description, media, endsAt, _count } = listingsData;
   const { bids } = _count;

@@ -1,3 +1,7 @@
+/**
+ * Sets the template to how to display the listing on the auction specific page
+ * @param {string} listingsData fetches the listing information to be displayed
+ */
 export function listingTemplate(listingsData) {
   const { title, description, media, endsAt, bids, seller } = listingsData;
   const { name, avatar } = seller;

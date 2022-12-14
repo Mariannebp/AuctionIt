@@ -1,6 +1,11 @@
 import { auctionBaseUrl } from "../constants.mjs";
 import { authFetch } from "../authFetch.mjs";
 
+/**
+ * Makes a bid on a listing
+ * @param {number} bidData represents the input information
+ * @returns
+ */
 export async function makeBid(bidData) {
   const listId = localStorage.getItem("listId");
   const action = `/listings/${listId}/bids`;

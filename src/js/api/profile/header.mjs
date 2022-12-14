@@ -4,6 +4,9 @@ import { load } from "../../storage/index.mjs";
 
 const action = "/profiles";
 
+/**
+ * Checks if a user is logged in; displaying user information if logged in, or a log in button if not
+ */
 export async function checkIfLoggedIn() {
   const userCreditsContainer = document.querySelector("#userCreditsContainer");
   const userCredits = document.querySelector("#credits");

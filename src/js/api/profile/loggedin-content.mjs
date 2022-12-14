@@ -1,5 +1,8 @@
 import { load } from "../../storage/index.mjs";
 
+/**
+ * Checks if a user is logged in, displaying an error message if not
+ */
 export function checkIfLoggedInContent() {
   const loggedInWarning = document.querySelector("main");
   const profile = load("profile");
