@@ -47,7 +47,9 @@ export function listingTemplate(listingsData) {
   endsAtTime.innerHTML = new Date(endsAt).toLocaleString();
   desc.innerHTML = description;
 
-  if (bids.length) {
+  const bidsSorted = bids.sort((a, b) => b.amount - a.amount);
+
+  if (bidsSorted.length) {
     for (let i = 0; i < bids.length; i++) {
       bidsList.innerHTML += `<div class="d-flex justify-content-between me-5">
                               <p class="text-secondary">${bids[i].bidderName}</p>
