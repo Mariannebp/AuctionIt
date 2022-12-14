@@ -35,8 +35,14 @@ export function listingTemplate(listingsData) {
     }
   }
 
-  sellerAvatar.src = avatar;
-  sellerAvatar.alt = "User avatar";
+  if (avatar) {
+    sellerAvatar.src = avatar;
+    sellerAvatar.alt = "User avatar";
+  } else {
+    sellerAvatar.src = "../assets/icons/profile.png";
+    sellerAvatar.alt = "User avatar";
+  }
+
   sellerName.innerHTML = name;
   endsAtTime.innerHTML = new Date(endsAt).toLocaleString();
   desc.innerHTML = description;
