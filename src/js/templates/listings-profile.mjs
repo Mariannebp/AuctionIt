@@ -52,7 +52,7 @@ export function listingTemplate(listingsData) {
   listingInfo.append(listingTitle);
 
   const listingEnds = document.createElement("div");
-  listingEnds.classList.add("d-flex", "justify-content-end", "mt-4");
+  listingEnds.classList.add("d-flex", "justify-content-center", "mt-4");
   listingInfo.append(listingEnds);
 
   const listingEndsIcon = document.createElement("img");

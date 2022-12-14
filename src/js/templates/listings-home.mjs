@@ -23,18 +23,26 @@ export function listingTemplate(listingsData) {
   listingContent.classList.add("m-2", "mb-auto", "text-center");
   listingCard.append(listingContent);
 
+  const listingMediaContainer = document.createElement("div");
+  listingMediaContainer.classList.add("m-3");
+  listingMediaContainer.setAttribute(
+    "style",
+    "height: 200px; max-width: 100%;"
+  );
+  listingContent.append(listingMediaContainer);
+
   if (media.length) {
     const listingMedia = document.createElement("img");
     listingMedia.classList.add("img-fluid");
     listingMedia.setAttribute("style", "max-height: 200px; max-width: 100%;");
     listingMedia.src = media[0];
     listingMedia.alt = `Image for ${title}`;
-    listingContent.append(listingMedia);
+    listingMediaContainer.append(listingMedia);
   } else {
     const listingMedia = document.createElement("div");
-    listingMedia.classList.add("m-3", "border");
+    listingMedia.classList.add("border");
     listingMedia.setAttribute("style", "height: 200px; max-width: 100%;");
-    listingContent.append(listingMedia);
+    listingMediaContainer.append(listingMedia);
 
     const listingMediaInner = document.createElement("div");
     listingMediaInner.classList.add("m-3", "border");
@@ -52,7 +60,7 @@ export function listingTemplate(listingsData) {
   listingInfo.append(listingTitle);
 
   const listingEnds = document.createElement("div");
-  listingEnds.classList.add("d-flex", "justify-content-end", "mt-4");
+  listingEnds.classList.add("d-flex", "justify-content-center", "mt-4");
   listingInfo.append(listingEnds);
 
   const listingEndsIcon = document.createElement("img");
