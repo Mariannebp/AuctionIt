@@ -32,5 +32,10 @@ npm i
 
 To run
 ```md
-npm run start
+npm run build
+```
+
+To run app on localhost
+```md
+npm run vite-dev
 ```
