@@ -27,7 +27,7 @@ export function listingTemplate(listingsData) {
     mediaMain.alt = `images for ${title}`;
 
     for (let i = 1; i < media.length; i++) {
-      mediaGallery.innerHTML += `<img class="col img-fluid mt-5 mb-3" style="width: 200px; height: 100% alt="images for ${title}" src=${media[i]} >`;
+      mediaGallery.innerHTML += `<img class="col img-fluid mt-5 mb-3" style="width: 200px; height: 100%;" alt="images for ${title}" src=${media[i]} >`;
     }
   }
 
