@@ -32,6 +32,7 @@ export function listingTemplate(listingsData) {
   }
 
   sellerAvatar.src = avatar;
+  sellerAvatar.alt = "User avatar";
   sellerName.innerHTML = name;
   endsAtTime.innerHTML = new Date(endsAt).toLocaleString();
   desc.innerHTML = description;
