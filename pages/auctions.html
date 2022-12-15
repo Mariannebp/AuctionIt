@@ -71,7 +71,12 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   id="userIcon"
-                >
+                  ><img
+                    class="img-fluid"
+                    style="width: 30px"
+                    alt="Avatar"
+                    src="../assets/icons/profile.png"
+                  />
                 </a>
                 <ul class="dropdown-menu text-small">
                   <li
@@ -136,9 +141,12 @@
                       name="title"
                       id="floatingTitle"
                       placeholder="Title"
+                      maxlength="100"
+                      title="maximum length 100 characters"
                       required
                     />
                     <label for="floatingEmail" class="ms-3">Title</label>
+                    <p class="ms-3">Maximum length 100 characters</p>
                   </div>
                   <div class="form-floating mb-3">
                     <textarea
@@ -147,11 +155,14 @@
                       name="description"
                       id="floatingDescription"
                       placeholder="Description"
+                      maxlength="280"
+                      title="maximum length 280 characters"
                       style="height: 100px"
                     ></textarea>
                     <label for="floatingDescription" class="ms-3"
                       >Description</label
                     >
+                    <p class="ms-3">Maximum length 280 characters</p>
                   </div>
                   <div class="form-floating mb-3">
                     <input
@@ -163,9 +174,7 @@
                       title="Separate multiple tags with ', '"
                     />
                     <label for="floatingTags" class="ms-3">Tags</label>
-                    <p class="ms-3 fs-italic">
-                      Separate multiple tags with ', '
-                    </p>
+                    <p class="ms-3">Separate multiple tags with ', '</p>
                   </div>
                   <div class="form-floating mb-3">
                     <input
@@ -178,7 +187,7 @@
                       title="Please enter valid urls, and separate them with ', '"
                     />
                     <label for="floatingMedia" class="ms-3">Media</label>
-                    <p class="ms-3 fs-italic">
+                    <p class="ms-3">
                       Please enter valid urls, and separate them with ', '
                     </p>
                   </div>

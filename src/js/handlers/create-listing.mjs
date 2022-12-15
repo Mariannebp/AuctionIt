@@ -22,7 +22,6 @@ export function setCreateListingListener() {
       const endsAt = newEndsAt.value;
       const currentTime = new Date().toISOString();
 
-      console.log(currentTime);
       if (endsAt > currentTime) {
         await createListing({
           title: title,

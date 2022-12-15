@@ -220,6 +220,7 @@
                 id="floatingNameRegister"
                 placeholder="Name"
                 pattern="^[\w]+$"
+                maxlength="20"
                 title="Make sure to only use lower and upper case letters, numbers and underscore"
                 style="border-radius: 0px"
               />
@@ -259,11 +260,12 @@
               <input
                 required
                 class="form-control"
-                type="uri"
+                type="url"
                 name="avatar"
                 id="floatingAvatarRegister"
                 placeholder="Avatar"
                 style="border-radius: 0px"
+                title="Link must be a valid url"
               />
               <label for="floatingAvatarRegister" class="ms-3">Avatar</label>
             </div>
