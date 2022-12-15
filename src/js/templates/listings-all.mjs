@@ -59,7 +59,7 @@ export function listingTemplate(listingsData) {
   listingContent.append(listingInfo);
 
   const listingTitle = document.createElement("h2");
-  listingTitle.classList.add("card-title", "fs-5", "text-center", "mt-4");
+  listingTitle.classList.add("card-title", "fs-5", "text-center", "mt-2");
   listingTitle.innerHTML = title;
   listingInfo.append(listingTitle);
 

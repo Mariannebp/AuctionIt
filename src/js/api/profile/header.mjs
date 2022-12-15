@@ -25,8 +25,10 @@ export async function checkIfLoggedIn() {
     const result = await response.json();
     const { name, credits, avatar } = result;
 
-    userIcon.innerHTML = `<img class="img-fluid" style="width: 40px" alt="Avatar for ${name}" src=${avatar}>`;
-    userCredits.innerHTML = credits;
+    if (avatar.length) {
+      userIcon.innerHTML = `<img class="img-fluid" style="width: 40px" alt="Avatar for ${name}" src=${avatar}>`;
+      userCredits.innerHTML = credits;
+    }
   } else {
     userCreditsContainer.style.display += "none";
     userMenu.style.display += "none";
