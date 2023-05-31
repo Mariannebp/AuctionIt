@@ -1,6 +1,12 @@
-# AuctionIt - Semester Project 2
+#  Semester Project 2 - AuctionIt
 
 [![Deploy static content to Pages](https://github.com/Mariannebp/AuctionIt/actions/workflows/static.yml/badge.svg)](https://github.com/Mariannebp/AuctionIt/actions/workflows/static.yml)
+
+![Screen shot of project](/assets/img/AuctionIT-edt-size.jpg)
+
+Type: Semester Project 2
+When: Fall 2022
+Where: Front End Development course, Noroff School of technology and digital media.
 
 ## Description
 
@@ -19,8 +25,14 @@ On this website the users will be able to:
 - view bids made on a listing if logged in
 - all users may search through listings
 
+## Built with
 
-## Setup and run
+- HTML
+- Bootstrap
+
+## Getting started
+
+### Install
 
 Clone the repo
 https://github.com/Mariannebp/AuctionIt.git
@@ -29,6 +41,8 @@ Install
 ```md
 npm i
 ```
+
+### Run
 
 To run
 ```md
@@ -39,3 +53,22 @@ To run app on localhost
 ```md
 npm run vite-dev
 ```
+
+## Improvements
+
+#### What I have changed since delivery
+
+- Improving HTML and CSS syntax
+- Updated the README file
+
+## Contact
+
+Email:
+mariannebpedersen@gmail.com
+
+Link to the project website:
+https://mariannebp.github.io/AuctionIt/index.html
+
+## Acknowledgements
+
+- https://font.google.com
