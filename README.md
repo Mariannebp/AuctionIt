@@ -4,9 +4,9 @@
 
 ![Screen shot of project](/assets/img/AuctionIT-edt-size.jpg)
 
-Type: Semester Project 2
-When: Fall 2022
-Where: Front End Development course, Noroff School of technology and digital media.
+- Type: Semester Project 2
+- When: Fall 2022
+- Where: Front End Development course, Noroff School of technology and digital media.
 
 ## Description
 
