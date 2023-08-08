@@ -31,10 +31,11 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "sass": "^1.56.1",
-    "vite": "^3.2.4"
+    "vite": "^3.2.7"
   },
   "dependencies": {
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "word-wrap": "^1.2.5"
   },
   "lint-staged": {
     "*.mjs": [
