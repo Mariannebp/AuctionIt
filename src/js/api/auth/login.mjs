@@ -2,7 +2,7 @@ import { auctionBaseUrl } from "../constants.mjs";
 import * as storage from "../../storage/index.mjs";
 
 const action = "/auth/login";
-const method = "post"
+const method = "post";
 
 /**
  * Logs in the user and stores their profile information in localstorage
@@ -14,21 +14,20 @@ export async function login(profile) {
 
   const response = await fetch(loginUrl, {
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     method,
-    body
-  })
+    body,
+  });
 
-  const { accessToken, ...user } = await response.json()
-
-  storage.save("token", accessToken)
-  storage.save("profile", user)
+  const { accessToken, ...user } = await response.json();
 
   if (response.ok) {
     alert("You logged in!");
     location.href = "profile.html";
+    storage.save("token", accessToken);
+    storage.save("profile", user);
   } else {
-    alert("Something went wrong, please try again")
+    alert("Something went wrong, please try again");
   }
 }
